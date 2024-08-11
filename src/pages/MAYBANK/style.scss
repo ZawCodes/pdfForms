@@ -1,0 +1,1109 @@
+.page {
+  min-width: 900px;
+  max-width: 900px;
+  height: 1270px;
+  border: 1px solid #e0e0e0;
+  background-color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+  }
+  input[type="text"] {
+    border: none;
+    border-bottom: 1px solid #2e2e2e;
+    width: 100%;
+    font-size: 11px;
+  }
+  input[type="checkbox"] {
+    width: 11px;
+    height: 11px;
+
+    margin: 0 4px 0 0;
+  }
+
+  @mixin primary-text {
+    font-size: 10px;
+    letter-spacing: -0.1px;
+    line-height: 1;
+    font-weight: 500;
+  }
+
+  @mixin primary-color {
+    color: #ffc600;
+  }
+  @mixin primary-bg-color {
+    background-color: #ffc600;
+  }
+  @mixin title-yellow {
+    border-radius: 25px;
+    @include primary-bg-color;
+    h2 {
+      font-size: 12px;
+      font-weight: bold;
+      padding: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  @mixin primary-h4 {
+    white-space: nowrap;
+    margin-right: 0.5rem;
+  }
+
+  @mixin mb-025 {
+    margin-bottom: 0.25rem;
+  }
+
+  @mixin mb-05 {
+    margin-bottom: 0.5rem;
+  }
+
+  .mb-025 {
+    @include mb-025;
+  }
+
+  .mb-05 {
+    @include mb-05;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+      width: 200px;
+      img {
+        width: 100%;
+      }
+    }
+
+    h1 {
+      @include primary-color;
+      font-size: 28px;
+      text-shadow: 2px 2px 0px black;
+    }
+  }
+  .paragraph {
+    @include primary-text;
+
+    .bullet {
+      margin: 0;
+      padding-left: 16px;
+    }
+  }
+  .title {
+    @include title-yellow;
+    @include mb-05;
+  }
+  .personal-details {
+    @include primary-text;
+    display: flex;
+    gap: 1rem;
+    .left,
+    .right {
+      flex: 1 1 50%;
+    }
+    .left {
+      border-right: 1px solid gainsboro;
+      padding-right: 1rem;
+    }
+    .right {
+      padding-left: 1rem;
+    }
+    .joint {
+      display: flex;
+      div {
+        display: flex;
+        @include primary-h4;
+      }
+    }
+    .fullname {
+      display: flex;
+      align-items: center;
+      .cb-group {
+        display: flex;
+        gap: 0.5rem;
+        margin-left: 0.5rem;
+      }
+    }
+    input[type="text"] {
+      width: 100%;
+    }
+    .nric {
+      display: flex;
+      h4 {
+        @include primary-h4;
+      }
+    }
+    .nationality {
+      display: flex;
+      h4 {
+        @include primary-h4;
+      }
+    }
+    .marital {
+      display: flex;
+      h4 {
+        @include primary-h4;
+      }
+      .cb-group {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        div {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+    .dependants {
+      display: flex;
+      h4 {
+        @include primary-h4;
+      }
+      input {
+        width: 100px;
+      }
+    }
+    .education {
+      display: flex;
+      h4 {
+        @include primary-h4;
+      }
+      .cb-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 0;
+        label {
+          white-space: nowrap;
+        }
+        div {
+          min-width: 56px;
+          margin-right: 1rem;
+        }
+      }
+    }
+    .residential,
+    .mailing {
+      h4 {
+        @include primary-h4;
+      }
+      .top {
+        display: flex;
+        align-items: center;
+        div {
+          label {
+            margin-right: 0.5rem;
+          }
+        }
+      }
+      .bottom {
+        display: flex;
+        align-items: center;
+        input:last-of-type {
+          width: 100px;
+        }
+      }
+    }
+    .contact {
+      .inputs {
+        display: flex;
+        flex-wrap: wrap;
+        div {
+          display: flex;
+          flex: 0 1 50%;
+          align-items: center;
+          input {
+            width: 184px;
+          }
+        }
+      }
+    }
+    .email {
+      display: flex;
+      h4 {
+        @include primary-h4;
+      }
+    }
+    .ownership {
+      display: flex;
+      h4 {
+        @include primary-h4;
+        min-width: 103px;
+      }
+      .cb-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 0;
+        div {
+          display: flex;
+          flex: 1 0 30%;
+        }
+      }
+    }
+    .type {
+      display: flex;
+      h4 {
+        @include primary-h4;
+        min-width: 103px;
+      }
+      .cb-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 0;
+        div {
+          letter-spacing: -0.5px;
+          margin: 0;
+          display: flex;
+          flex: 1 0 10%;
+          @include primary-h4;
+          min-width: 120px;
+        }
+      }
+    }
+    .length {
+      display: flex;
+      align-items: center;
+      input {
+        width: 80px;
+      }
+      h4 {
+        @include primary-h4;
+      }
+    }
+  }
+
+  .employment-details {
+    @include primary-text;
+    display: flex;
+    gap: 1rem;
+    .left,
+    .right {
+      flex: 1 1 50%;
+    }
+    .left {
+      border-right: 1px solid gainsboro;
+      padding-right: 1rem;
+    }
+    .right {
+      padding-left: 1rem;
+    }
+    .status {
+      display: flex;
+      h4 {
+        @include primary-h4;
+      }
+      > div {
+        display: flex;
+        gap: 1rem;
+      }
+    }
+    .company {
+      display: flex;
+
+      h4 {
+        @include primary-h4;
+      }
+    }
+    .designation {
+      display: flex;
+      h4 {
+        @include primary-h4;
+      }
+    }
+    .industry {
+      display: flex;
+      h4 {
+        @include primary-h4;
+        min-width: 80px;
+      }
+      .cb-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 0;
+        div {
+          display: flex;
+          align-items: center;
+          min-width: 100px;
+          letter-spacing: -0.9px;
+          input[type="text"] {
+            width: 100px;
+          }
+        }
+      }
+    }
+    .current {
+      display: flex;
+      h4 {
+        @include primary-h4;
+        min-width: 80px;
+      }
+      .cb-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 0;
+        div {
+          display: flex;
+          align-items: center;
+          min-width: 100px;
+          letter-spacing: -0.9px;
+          input[type="text"] {
+            width: 100px;
+          }
+        }
+      }
+    }
+    .length {
+      display: flex;
+      align-items: center;
+      h4 {
+        @include primary-h4;
+      }
+    }
+    .structure {
+      display: flex;
+      h4 {
+        @include primary-h4;
+        min-width: 80px;
+      }
+      .cb-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 0;
+        div {
+          display: flex;
+          min-width: 100px;
+          letter-spacing: -0.9px;
+          input[type="text"] {
+            width: 100px;
+          }
+        }
+      }
+    }
+    .income {
+      display: flex;
+      h4 {
+        @include primary-h4;
+        min-width: 80px;
+      }
+      .inputs {
+        > div {
+          display: flex;
+          align-items: center;
+          div {
+            display: flex;
+            align-items: center;
+          }
+          > label {
+            @include primary-h4;
+            min-width: 138px;
+          }
+        }
+      }
+    }
+    .source {
+      display: flex;
+      gap: 1rem;
+      h4 {
+        @include primary-h4;
+      }
+    }
+    .previous {
+      display: flex;
+      align-items: center;
+      h4 {
+        @include primary-h4;
+      }
+    }
+    .previous-length {
+      display: flex;
+      align-items: center;
+      h4 {
+        @include primary-h4;
+      }
+    }
+  }
+  .footer {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 20px;
+    box-sizing: border-box;
+
+    @include primary-text;
+  }
+
+  .details-property {
+    @include primary-text;
+    display: flex;
+    gap: 1rem;
+    .left,
+    .right {
+      flex: 1 1 50%;
+    }
+    .block {
+      h4 {
+        @include primary-h4;
+      }
+      div {
+        display: flex;
+        align-items: center;
+        label {
+          white-space: nowrap;
+        }
+      }
+    }
+    .registered {
+      display: flex;
+      h4 {
+        @include primary-h4;
+      }
+    }
+    .registered-inputs {
+      div {
+        display: flex;
+        align-items: center;
+        span {
+          width: 6px;
+        }
+        input[type="text"] {
+          &:not(:last-of-type) {
+            margin-right: 1rem;
+          }
+          flex-shrink: 1;
+          &:first-of-type {
+            width: 180px;
+          }
+        }
+      }
+    }
+    .landarea {
+      display: flex;
+      align-items: center;
+      label,
+      h4 {
+        @include primary-h4;
+      }
+    }
+    .tenure {
+      display: flex;
+      h4 {
+        @include primary-h4;
+        min-width: 80px;
+      }
+      div {
+        margin-bottom: 0.25rem;
+        div {
+          display: flex;
+          align-items: center;
+          @include primary-h4;
+        }
+      }
+    }
+    .purpose {
+      display: flex;
+      h4 {
+        @include primary-h4;
+        min-width: 80px;
+      }
+      .cb-group {
+        div {
+          display: flex;
+          align-items: center;
+          flex: 1 0 30%;
+          @include primary-h4;
+          margin-bottom: 0.25rem;
+        }
+      }
+    }
+    .hdb {
+      display: flex;
+      h4 {
+        @include primary-h4;
+        margin-right: 2rem;
+      }
+      .cb-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.25rem 0.5rem;
+        letter-spacing: -0.5px;
+        div {
+          display: flex;
+          align-items: center;
+          @include primary-h4;
+        }
+      }
+    }
+    .private {
+      display: flex;
+      h4 {
+        @include primary-h4;
+        min-width: 100px;
+      }
+      label {
+        @include primary-h4;
+      }
+      .cb-group {
+        display: flex;
+        gap: 0.25rem 0.5rem;
+        flex-wrap: wrap;
+        div {
+          display: flex;
+          align-items: center;
+          @include primary-h4;
+          min-width: 80px;
+        }
+      }
+    }
+    .commercial {
+      display: flex;
+      h4 {
+        @include primary-h4;
+        min-width: 100px;
+      }
+      label {
+        @include primary-h4;
+      }
+      .cb-group {
+        display: flex;
+        gap: 0.25rem 0.5rem;
+        flex-wrap: wrap;
+        div {
+          display: flex;
+          @include primary-h4;
+          letter-spacing: -0.5px;
+          div:first-of-type {
+            min-width: 110px;
+          }
+        }
+      }
+    }
+    .industrial {
+      display: flex;
+      h4 {
+        @include primary-h4;
+        min-width: 100px;
+      }
+      label {
+        @include primary-h4;
+      }
+      .cb-group {
+        display: flex;
+        gap: 0.25rem 0.5rem;
+        flex-wrap: wrap;
+        div {
+          display: flex;
+          align-items: center;
+          @include primary-h4;
+          div:first-of-type {
+            min-width: 110px;
+          }
+        }
+      }
+    }
+    .status {
+      display: flex;
+      h4 {
+        @include primary-h4;
+      }
+      label {
+        @include primary-h4;
+      }
+      .cb-group {
+        display: flex;
+        flex-wrap: wrap;
+        .property {
+          display: flex;
+          align-items: flex-start;
+          h4 {
+            @include primary-h4;
+            min-width: 100px;
+          }
+          .col {
+            display: flex;
+            gap: 0.25rem;
+            display: flex;
+            align-items: flex-start;
+          }
+        }
+        div {
+          display: flex;
+          align-items: center;
+          @include primary-h4;
+          &.col {
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+  .new-facilities {
+    @include primary-text;
+    h3 {
+      font-size: 11px;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    .purchase-financing {
+      display: flex;
+      gap: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid gainsboro;
+      margin-bottom: 0.75rem;
+      .left,
+      .right {
+        flex: 1 1 50%;
+      }
+      .otp {
+        display: flex;
+        h4 {
+          @include primary-h4;
+          min-width: 140px;
+        }
+        > div {
+          gap: 1rem;
+        }
+        div {
+          display: flex;
+          align-items: center;
+          label {
+            @include primary-h4;
+          }
+        }
+      }
+      .purchase {
+        display: flex;
+        h4 {
+          @include primary-h4;
+          min-width: 140px;
+        }
+
+        > div {
+          display: flex;
+          gap: 1rem;
+          div {
+            display: flex;
+            align-items: center;
+            @include primary-h4;
+          }
+        }
+      }
+      .benefits {
+        display: flex;
+        h4 {
+          @include primary-h4;
+          min-width: 140px;
+          letter-spacing: -0.5px;
+        }
+        > div {
+          display: flex;
+          gap: 1rem;
+          div {
+            display: flex;
+            align-items: center;
+            margin-right: 0.5rem;
+          }
+        }
+      }
+      .received {
+        div {
+          display: flex;
+          align-items: center;
+          @include primary-h4;
+          input {
+            width: 100px;
+          }
+        }
+      }
+      .purchase-price {
+        display: flex;
+        h4 {
+          @include primary-h4;
+          min-width: 120px;
+        }
+        div {
+          display: flex;
+          align-items: center;
+          @include primary-h4;
+        }
+      }
+      .purchase-from {
+        display: flex;
+        h4 {
+          @include primary-h4;
+          min-width: 120px;
+        }
+        div {
+          display: flex;
+          @include primary-h4;
+        }
+      }
+      .cash-valuation,
+      .cash-downpayment,
+      .cpf-downpayment,
+      .cpf-grant {
+        display: flex;
+        h4 {
+          @include primary-h4;
+          min-width: 164px;
+        }
+        div {
+          display: flex;
+          @include primary-h4;
+        }
+      }
+      .financing {
+        display: flex;
+        @include primary-h4;
+        h4 {
+          min-width: 164px;
+        }
+        div {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+    .equity-withdrawal {
+      border-bottom: 1px solid gainsboro;
+      .fresh {
+        display: flex;
+        align-items: center;
+        @include primary-h4;
+        input[type="text"]:first-of-type {
+          width: 100px;
+        }
+        input[type="text"]:last-of-type {
+          width: 80px;
+        }
+        > div {
+          display: flex;
+          align-items: center;
+
+          div {
+            display: flex;
+            align-items: center;
+            margin-right: 1rem;
+          }
+        }
+      }
+      .total {
+        display: flex;
+        align-items: center;
+        input[type="text"] {
+          width: 100px;
+        }
+      }
+      .paragraph {
+        width: 90%;
+        padding-bottom: 1rem;
+        p {
+          @include mb-025();
+        }
+      }
+    }
+    .refinancing {
+      margin-top: 0.75rem;
+      border-bottom: 1px solid gainsboro;
+      padding-bottom: 0.75rem;
+      .existing,
+      .outstanding,
+      .undisbursed,
+      .equity,
+      .total-cpf,
+      .financing-required {
+        display: flex;
+        align-items: center;
+        @include primary-h4;
+        h4 {
+          min-width: 270px;
+        }
+        div {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+    .bridging {
+      margin-top: 0.75rem;
+      display: flex;
+      gap: 1rem;
+      .left,
+      .right {
+        flex: 1 1 50%;
+      }
+
+      .loan {
+        display: flex;
+        align-items: center;
+        div {
+          display: flex;
+          align-items: center;
+        }
+      }
+      .address {
+        @include primary-h4;
+        div {
+          display: flex;
+          align-items: center;
+          input:last-of-type {
+            width: 100px;
+          }
+        }
+      }
+      .prices {
+        div {
+          display: flex;
+          h4 {
+            min-width: 230px;
+          }
+        }
+      }
+      .cost,
+      .period,
+      .loan {
+        display: flex;
+        align-items: center;
+        h4 {
+          min-width: 180px;
+        }
+        div {
+          display: flex;
+          align-items: center;
+        }
+      }
+      .purpose {
+        display: flex;
+        h4 {
+          min-width: 180px;
+        }
+        > div {
+          div {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+  .mortgage-protection {
+    .paragraph {
+      font-size: 11px;
+      p {
+        font-weight: 700;
+        @include mb-05;
+      }
+    }
+    .options {
+      @include primary-text;
+      div {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+  .home-renovation {
+    display: flex;
+    @include primary-text;
+  }
+  .credit {
+    @include primary-text;
+    div {
+      display: flex;
+      @include mb-025;
+    }
+  }
+  .referral {
+    .paragraph {
+      p {
+        @include mb-05;
+      }
+    }
+    .cb {
+      display: flex;
+      align-items: center;
+      @include primary-text;
+      gap: 5rem;
+      div {
+        display: flex;
+        align-items: center;
+        input[type="text"] {
+          width: 100px;
+        }
+      }
+    }
+  }
+  .declaration {
+    margin-bottom: 2rem;
+  }
+
+  .table {
+    @include primary-text;
+    table {
+      border-collapse: collapse;
+      td {
+        padding: 4px 8px;
+      }
+    }
+
+    th,
+    td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  }
+  .signature {
+    @include primary-text;
+    .top {
+      display: flex;
+      gap: 5rem;
+      div {
+        flex: 1 1 50%;
+      }
+    }
+    .bottom {
+      display: flex;
+      gap: 5rem;
+      div {
+        display: flex;
+        align-items: center;
+        flex: 1 1 50%;
+      }
+    }
+  }
+  .documents {
+    display: flex;
+    @include primary-text;
+    gap: 1rem;
+    .left,
+    .right {
+      flex: 1 0 50%;
+    }
+    .left {
+      .income {
+        display: flex;
+        gap: 1rem;
+        label {
+          @include primary-h4;
+        }
+        div {
+          display: flex;
+        }
+        .cb-group {
+          flex-direction: column;
+          .col {
+            flex-direction: column;
+            label {
+              white-space: wrap;
+            }
+          }
+        }
+      }
+    }
+    .right {
+      .bridging-loan {
+        padding-left: 1rem;
+        div {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+  .package {
+    @include primary-text;
+    margin-bottom: 2rem;
+    h4 {
+      @include primary-h4;
+    }
+    > div {
+      display: flex;
+      align-items: center;
+      label {
+        @include primary-h4;
+      }
+      > div {
+        display: flex;
+      }
+    }
+    .confirmation {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+    }
+    .internal {
+      display: flex;
+      align-items: center;
+      gap: 78px;
+      > div {
+        display: flex;
+        align-items: center;
+      }
+    }
+    .dated {
+      display: flex;
+      align-items: center;
+    }
+    .applicant {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+  }
+  .remarks {
+    @include primary-text;
+
+    .space {
+      border-radius: 12px;
+      border: 2px solid #ffc600;
+      width: 100%;
+      height: 800px;
+    }
+  }
+  .bottom-signs {
+    display: flex;
+    @include primary-text;
+    gap: 1rem;
+    .left,
+    .right {
+      flex: 1 0 50%;
+    }
+    .left,
+    .right {
+      .flex {
+        display: flex;
+        align-items: center;
+      }
+      div {
+        label {
+          @include primary-h4;
+        }
+        &:not(:first-of-type) {
+          display: flex;
+        }
+      }
+    }
+  }
+}
