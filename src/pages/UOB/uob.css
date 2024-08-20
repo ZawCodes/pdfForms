@@ -1,0 +1,155 @@
+.u-paragraph {
+	font-size: 12px;
+}
+
+.u-text {
+	margin-bottom: 1rem !important;
+}
+
+.form-container {
+	width: 100%;
+}
+
+h2 {
+	background-color: blue;
+	text-align: center;
+	color: white;
+	border-bottom: 3px solid white;
+	padding: 10px 0;
+	/* margin-bottom: 20px; */
+	font-size: 24px;
+	font-weight: 700;
+}
+
+.applicant-section {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+}
+
+.applicant {
+	width: 50%;
+	/* border: 2px solid; */
+	/* padding: 10px; */
+}
+
+h3 {
+	padding-bottom: 5px;
+	margin-bottom: 15px;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.form-group {
+	margin-bottom: 15px;
+}
+
+.form-group label {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+/* .form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="email"],
+.form-group input[type="number"],
+.form-group textarea {
+	width: 100%;
+	padding: 8px 10px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-size: 14px;
+}
+
+.form-group input[type="radio"],
+.form-group input[type="checkbox"] {
+	margin-right: 5px;
+} */
+
+.inline-group {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.inline-group input[type="text"] {
+	/* width: auto; */
+	flex: 1;
+}
+
+textarea {
+	resize: vertical;
+}
+
+.form-group div {
+	margin-top: 5px;
+}
+
+.form-group span {
+	font-size: 0.9em;
+	color: #888;
+}
+
+.inline-group label {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	margin: 5px 0;
+}
+
+.form-group input::placeholder {
+	font-style: italic;
+	color: #aaa;
+}
+
+/* table */
+.applicant-form {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 20px 0;
+}
+
+.applicant-form td {
+	border: 1px solid black;
+	padding: 10px;
+}
+
+.section-title {
+	text-align: left;
+	font-weight: bold;
+	padding: 10px;
+	font-size: 1.2em;
+	background-color: #f4f4f4;
+}
+
+.label {
+	width: 30%;
+	vertical-align: top;
+	padding: 10px;
+	font-weight: bold;
+}
+
+.checkbox-group {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.checkbox-group label {
+	margin-right: 10px;
+}
+
+.checkbox-group .underline {
+	font-style: italic;
+	margin-left: 20px;
+}
+
+input[type="text"],
+input[type="date"] {
+	width: 100%;
+	padding: 5px;
+	box-sizing: border-box;
+}
